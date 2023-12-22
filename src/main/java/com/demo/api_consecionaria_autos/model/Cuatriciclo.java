@@ -8,19 +8,19 @@ import lombok.ToString;
 @Getter @Setter @ToString
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Moto extends Vehiculo{
+public class Cuatriciclo extends Vehiculo{
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id_moto;
-    private int asientos;
+    private Long id_cuatriciclo;
+    private String cilindrada;
 
-    public Moto() {
+    public Cuatriciclo() {
     }
 
-    public Moto(Long id, String marca, String modelo, String patente, Double precio, Long id_moto, int asientos) {
+    public Cuatriciclo(Long id, String marca, String modelo, String patente, Double precio, Long id_cuatriciclo, String cilindrada) {
         super(id, marca, modelo, patente, precio);
-        this.id_moto = id_moto;
-        this.asientos = asientos;
+        this.id_cuatriciclo = id_cuatriciclo;
+        this.cilindrada = cilindrada;
     }
 }

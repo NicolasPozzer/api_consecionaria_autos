@@ -1,29 +1,27 @@
 package com.demo.api_consecionaria_autos.controller;
 
+import com.demo.api_consecionaria_autos.model.Auto;
 import com.demo.api_consecionaria_autos.service.AutoService;
-import com.demo.api_consecionaria_autos.service.MotoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-@CrossOrigin(origins = "")
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 public class VehiculoController {
 
     @Autowired
     private AutoService autoServ;
-    @Autowired
-    private MotoService motoServ;
 
-    @GetMapping("/vehiculo/moto/velocidadmax")
-    public String velocidadMax(){
-        return motoServ.velocidadMaxima();
+    @GetMapping("/vehiculos/autos/list")
+    public List<Auto> getAutos(){
+        return autoServ.getAutos();
     }
 
-    @GetMapping("/vehiculo/auto/velocidadmax")
-    public String velocidadMaxx(){
-        return autoServ.velocidadMaxima();
+    @PostMapping("/vehiculos/autos/crear")
+    public String saveAuto(@RequestBody Auto auto){
+        autoServ.saveAuto(auto);
+        return "Auto Cargado!";
     }
-
 
 }

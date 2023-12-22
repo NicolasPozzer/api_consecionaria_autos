@@ -1,24 +1,29 @@
 package com.demo.api_consecionaria_autos.model;
 
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
-@Getter
-@Setter
+@Getter @Setter @ToString
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Vehiculo {
 
     private Long id;
     private String marca;
-    private String duenio;
+    private String modelo;
     private String patente;
+    private Double precio;
 
     public Vehiculo() {
     }
 
-    public Vehiculo(Long id, String marca, String duenio, String patente) {
+    public Vehiculo(Long id, String marca, String modelo, String patente, Double precio) {
         this.id = id;
         this.marca = marca;
-        this.duenio = duenio;
+        this.modelo = modelo;
         this.patente = patente;
+        this.precio = precio;
     }
 }

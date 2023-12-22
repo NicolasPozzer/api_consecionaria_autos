@@ -6,13 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MotoService implements IVehiculoService{
+public class MotoService {
 
-
-
-    @Override
-    public String velocidadMaxima() {
-        String velocidad = "La velocidad Maxima es 180km";
-        return velocidad;
-    }
 }
