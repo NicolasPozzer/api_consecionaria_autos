@@ -22,4 +22,9 @@ public class AutoService implements IAutoService{
     public void saveAuto(Auto auto) {
         autoRepo.save(auto);
     }
+
+    @Override
+    public void deleteAuto(Long id) {
+        autoRepo.deleteById(id);
+    }
 }

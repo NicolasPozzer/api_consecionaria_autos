@@ -10,4 +10,6 @@ public interface IAutoService {
 
     public void saveAuto(Auto auto);
 
+    public void deleteAuto(Long id);
+
 }
