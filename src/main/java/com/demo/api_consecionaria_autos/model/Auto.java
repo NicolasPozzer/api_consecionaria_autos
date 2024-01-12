@@ -18,8 +18,8 @@ public class Auto extends Vehiculo{
     public Auto() {
     }
 
-    public Auto(Long id, String marca, String modelo, String patente, Double precio, Long id_auto, int puertas) {
-        super(id, marca, modelo, patente, precio);
+    public Auto(Long id, String tipo, String marca, String modelo, String patente, Double precio, Long id_auto, int puertas) {
+        super(id, tipo, marca, modelo, patente, precio);
         this.id_auto = id_auto;
         this.puertas = puertas;
     }

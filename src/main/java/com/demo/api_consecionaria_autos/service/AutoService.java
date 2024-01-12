@@ -3,11 +3,7 @@ package com.demo.api_consecionaria_autos.service;
 import com.demo.api_consecionaria_autos.model.Auto;
 import com.demo.api_consecionaria_autos.repository.IAutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.client.HttpStatusCodeException;
 
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -17,6 +13,7 @@ import java.util.Optional;
 public class AutoService implements IAutoService{
     @Autowired
     private IAutoRepository autoRepo;
+
 
     @Override
     public List<Auto> getAutos() {

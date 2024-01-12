@@ -11,6 +11,7 @@ import lombok.ToString;
 public class Vehiculo {
 
     private Long id;
+    private String tipo;
     private String marca;
     private String modelo;
     private String patente;
@@ -19,8 +20,9 @@ public class Vehiculo {
     public Vehiculo() {
     }
 
-    public Vehiculo(Long id, String marca, String modelo, String patente, Double precio) {
+    public Vehiculo(Long id, String tipo, String marca, String modelo, String patente, Double precio) {
         this.id = id;
+        this.tipo = tipo;
         this.marca = marca;
         this.modelo = modelo;
         this.patente = patente;

@@ -18,8 +18,8 @@ public class Cuatriciclo extends Vehiculo{
     public Cuatriciclo() {
     }
 
-    public Cuatriciclo(Long id, String marca, String modelo, String patente, Double precio, Long id_cuatriciclo, String cilindrada) {
-        super(id, marca, modelo, patente, precio);
+    public Cuatriciclo(Long id, String tipo, String marca, String modelo, String patente, Double precio, Long id_cuatriciclo, String cilindrada) {
+        super(id, tipo, marca, modelo, patente, precio);
         this.id_cuatriciclo = id_cuatriciclo;
         this.cilindrada = cilindrada;
     }

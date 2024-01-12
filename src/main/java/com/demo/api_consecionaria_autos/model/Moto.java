@@ -18,8 +18,8 @@ public class Moto extends Vehiculo{
     public Moto() {
     }
 
-    public Moto(Long id, String marca, String modelo, String patente, Double precio, Long id_moto, int asientos) {
-        super(id, marca, modelo, patente, precio);
+    public Moto(Long id, String tipo, String marca, String modelo, String patente, Double precio, Long id_moto, int asientos) {
+        super(id, tipo, marca, modelo, patente, precio);
         this.id_moto = id_moto;
         this.asientos = asientos;
     }
